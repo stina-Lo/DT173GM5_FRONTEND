@@ -1,0 +1,90 @@
+@import 'mixin';
+@import 'variables';
+
+
+body {
+    @include display-grid;
+    height: 100%;
+    grid-template-columns: repear(12, 1fr);
+}
+
+header {
+    @include flex-column;
+    @include grid-all-columns;
+    justify-content: flex-start;
+    grid-row: 1 / 5;
+}
+
+/*inheritance*/
+main {
+    @include basic-styles;
+    @include grid-all-columns;
+    grid-row: 5 / 9;
+}
+.mainSection {
+    margin: 3em;
+    @include flex-column;
+    @include flex-center;
+}
+
+.trashimg {
+    height:35px;
+    width:35px;
+}
+.bookimg {
+    height: 55px;
+    width:55px;
+}
+.course {
+    padding:1em;
+}
+ .course b {
+     padding:1em;
+ }
+ .firstB {
+     color: $primary-color; 
+     font-size: 150%;
+     font-weight: 200;
+ }
+
+footer {
+    @include basic-styles;
+    @include flex-row;
+    @include grid-all-columns;
+    @include space-evenly;
+    grid-row: 9 / 13;
+    background-color: rgba(185, 194, 182);
+}
+.socialmediaicon img {
+    @include box(35px);
+    padding:3em;
+}
+
+h1 {
+    font: 100% $font-stackI;
+    color: $primary-color;
+}
+
+label, input {
+    font: 100% $font-stackII;
+    margin:1em;
+}
+
+h2, p {
+    font: 100% $font-stackII;
+}
+
+
+.mainHeading {
+    @include headingBox;
+}
+
+.logo{
+    font: $font-stackIII;
+    color: $primary-color;
+    width: 120px;
+}
+
+
+
+

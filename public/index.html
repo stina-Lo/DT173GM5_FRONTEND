@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&family=Quantico&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="./index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+     <div class="headerItems flexbox flex-direction-row">
+        <div class="logo">
+            <p>Webbutvecklingsprogrammet 2019-2021</p>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="mainHeading">
+        <h1>Genomförda kurser</h1>
+            <img src="../styles/images/icons8-computer-64.png" alt="iconimage of computer">
+        </div>
+        <div id="courses">
+        </div>
+         <div class="mainSection">
+            <div class="preSection">
+                <h2>Kurser</h2>
+                <img src="../styles/images/icons8-book-shelf-64.png">
+            </div>
+                <form id="courseAdd">
+                    <label for="code">Kurskod:</label>
+                     <br>
+                    <input type="text" name="kurskod" id="kurskod">
+                     <br>
+                    <label for="name">Kursnamn:</label>
+                     <br>
+                    <input type="text" name="kurrnamn" id="kursnamn">
+                     <br>
+                    <label for="syllabus">Syllabus:</label>
+                     <br>
+                    <input type="url" name="syllabus" id="syllabus">
+                     <br>
+                    <label for="progression">Progression:</label>
+                     <br>
+                    <input type="text" name="progression" id="progression">
+                     <br>
+                    <button onClick="addCourse()">Lägg till kurs</button>
+                </form>
+       
+        </div>
+</main>
+    <footer>
+        <div class="socialmediaicon">
+            <img src="../styles/images/linkedin.png">
+            <img src="../styles/images/youtube.png">
+            <img src="../styles/images/facebook.png">
+            <img src="../styles/images/instagram.png">
+        </div>
+    </footer>  
+</body>
+</html>

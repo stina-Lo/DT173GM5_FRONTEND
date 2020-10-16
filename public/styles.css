@@ -1,0 +1,119 @@
+/*Flexbox toolkit*/
+/*flex grid mixin*/
+/*box mixings*/
+body {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repear(12, 1fr);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/13;
+  justify-content: flex-start;
+  grid-row: 1/5;
+}
+
+/*inheritance*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-column: 1/13;
+  grid-row: 5/9;
+}
+
+.mainSection {
+  margin: 3em;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trashimg {
+  height: 35px;
+  width: 35px;
+}
+
+.bookimg {
+  height: 55px;
+  width: 55px;
+}
+
+.course {
+  padding: 1em;
+}
+
+.course b {
+  padding: 1em;
+}
+
+.firstB {
+  color: #455c33;
+  font-size: 150%;
+  font-weight: 200;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/13;
+  justify-content: space-evenly;
+  grid-row: 9/13;
+  background-color: #b9c2b6;
+}
+
+.socialmediaicon img {
+  width: 35px;
+  height: 35px;
+  padding: 0px;
+  padding: 3em;
+}
+
+h1 {
+  font: 100% Prompt, sans-serif;
+  color: #455c33;
+}
+
+label, input {
+  font: 100% Ubuntu, sans-serif;
+  margin: 1em;
+}
+
+h2, p {
+  font: 100% Ubuntu, sans-serif;
+}
+
+.mainHeading {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  background: radial-gradient(ellipse at center, #b9c2b6 0%, #b9c2b6 70%, rgba(185, 194, 182, 0) 70.3%);
+}
+.mainHeading p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 150px;
+  line-height: 200%;
+}
+
+.logo {
+  font: Quantico, sans-serif;
+  color: #455c33;
+  width: 120px;
+}
+
+/*# sourceMappingURL=styles.css.map */

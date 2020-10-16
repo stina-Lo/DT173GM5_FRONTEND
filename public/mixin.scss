@@ -1,0 +1,83 @@
+/*Flexbox toolkit*/
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin space-evenly {
+    justify-content: space-evenly;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+/*flex grid mixin*/
+@mixin basic-styles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin display-grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+@mixin grid-all-columns {
+    grid-column: 1 / 13;
+}
+
+/*box mixings*/
+
+@mixin box ($width, $padding: 0px, $height: $width) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+}
+
+@mixin headingBox {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(ellipse at center,
+            rgba(185, 194, 182, 1) 0%,
+            rgba(185, 194, 182, 1) 70%,
+            rgba(185, 194, 182, 0) 70.3%);
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 150px;
+        line-height: 200%;
+    }
+}
