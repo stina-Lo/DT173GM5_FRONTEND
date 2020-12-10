@@ -29,7 +29,7 @@
                 <h2>Kurser</h2>
                 <img src="../styles/images/icons8-book-shelf-64.png">
             </div>
-                <form id="courseAdd">
+                <form id="courseAdd" onSubmit = "addCourse()">
                     <label for="code">Kurskod:</label>
                      <br>
                     <input type="text" name="kurskod" id="kurskod">
@@ -46,7 +46,7 @@
                      <br>
                     <input type="text" name="progression" id="progression">
                      <br>
-                    <button onClick="addCourse()">Lägg till kurs</button>
+                    <button type="submit">Lägg till kurs</button>
                 </form>
        
         </div>

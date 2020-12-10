@@ -3,7 +3,7 @@ function deleteCourse(id) {
     console.log("deleting: " + id);
     /*make fetch delete*/
     const data = { code: id}
-    fetch('http://localhost:8080/RestwebbtjM5/API/rest.php', {
+    fetch('https://willbur.nu/dt173g/API/rest.php', {
         method: 'DELETE',
         body: JSON.stringify(data)
     })
@@ -27,7 +27,7 @@ function getCourses() {
     
     let coursesEl = document.getElementById("courses");
     coursesEl.innerHTML = ''; /*empty value*/
-    fetch('http://localhost:8080/RestwebbtjM5/API/rest.php') /*make fetch*/
+    fetch('https://willbur.nu/dt173g/API/rest.php') /*make fetch*/
         .then(response => response.json())
         .then(data => {
             console.log(data)
@@ -61,13 +61,17 @@ function addCourse() {
             syllabus: x.elements[2].value,
             progression: x.elements[3].value
         }
-        fetch('http://localhost:8080/RestwebbtjM5/API/rest.php', {
+        console.log(data)
+        fetch('https://willbur.nu/dt173g/API/rest.php', {
             method: 'POST',
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            headers: { 
+                "Content-type": "application/json; charset=UTF-8"
+            } 
         })
             .then(response => response.json())
             .then(data => {
-                getCourses();
+                console.log(data)
             })
             .catch(error => {
                 console.log('Error: ', error);
